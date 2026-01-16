@@ -1,0 +1,481 @@
+/* ===========================
+   Reset & Base Styles
+   =========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #27ae60;
+    --light-bg: #ecf0f1;
+    --text-color: #2c3e50;
+    --text-light: #7f8c8d;
+    --border-color: #bdc3c7;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #f5f7fa;
+}
+
+/* ===========================
+   Header Section
+   =========================== */
+.header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.header-content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 22px;
+    margin-bottom: 30px;
+    opacity: 0.95;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+
+.contact-info span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ===========================
+   Container & Main Layout
+   =========================== */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main-content {
+    background-color: white;
+    padding: 60px 40px;
+    margin: 30px auto;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+/* ===========================
+   Section Styles
+   =========================== */
+.section {
+    margin-bottom: 50px;
+    border-bottom: 1px solid var(--light-bg);
+    padding-bottom: 40px;
+}
+
+.section:last-child {
+    border-bottom: none;
+}
+
+.section-title {
+    font-size: 28px;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    padding-bottom: 12px;
+    border-bottom: 3px solid var(--secondary-color);
+    display: inline-block;
+}
+
+.section p {
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* ===========================
+   Experience Items
+   =========================== */
+.experience-item {
+    margin-bottom: 35px;
+    padding: 20px;
+    background-color: #f9fafb;
+    border-left: 4px solid var(--secondary-color);
+    border-radius: 4px;
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 8px;
+}
+
+.experience-item h3 {
+    font-size: 20px;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.company {
+    font-size: 15px;
+    color: var(--secondary-color);
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.date {
+    font-size: 14px;
+    color: var(--text-light);
+    font-style: italic;
+    background-color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.responsibilities {
+    list-style: none;
+    margin-top: 12px;
+}
+
+.responsibilities li {
+    padding: 8px 0 8px 25px;
+    position: relative;
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+.responsibilities li:before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* ===========================
+   Education Items
+   =========================== */
+.education-item {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f0f8ff;
+    border-left: 4px solid var(--accent-color);
+    border-radius: 4px;
+}
+
+.education-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 8px;
+}
+
+.education-item h3 {
+    font-size: 19px;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.institution {
+    font-size: 15px;
+    color: var(--accent-color);
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.details {
+    font-size: 14px;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+/* ===========================
+   Skills Grid
+   =========================== */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.skill-category {
+    background-color: #f9fafb;
+    padding: 20px;
+    border-radius: 6px;
+    border-top: 3px solid var(--secondary-color);
+}
+
+.skill-category h4 {
+    color: var(--primary-color);
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.skill-category ul {
+    list-style: none;
+}
+
+.skill-category li {
+    padding: 8px 0;
+    padding-left: 20px;
+    position: relative;
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+.skill-category li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* ===========================
+   Certifications
+   =========================== */
+.certification-list {
+    list-style: none;
+}
+
+.certification-list li {
+    padding: 12px 0;
+    padding-left: 30px;
+    position: relative;
+    color: var(--text-light);
+    border-bottom: 1px solid var(--light-bg);
+}
+
+.certification-list li:last-child {
+    border-bottom: none;
+}
+
+.certification-list li:before {
+    content: "🏆";
+    position: absolute;
+    left: 0;
+}
+
+/* ===========================
+   Projects
+   =========================== */
+.project-item {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9fafb;
+    border-left: 4px solid var(--accent-color);
+    border-radius: 4px;
+}
+
+.project-item h3 {
+    color: var(--primary-color);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.project-description {
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+/* ===========================
+   Languages
+   =========================== */
+.languages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.language {
+    padding: 20px;
+    background-color: #f9fafb;
+    border-radius: 6px;
+    border-top: 3px solid var(--secondary-color);
+}
+
+.language span {
+    display: block;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+.proficiency-bar {
+    height: 8px;
+    background-color: var(--light-bg);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.proficiency-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+    border-radius: 4px;
+}
+
+.proficiency-level {
+    font-size: 12px;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+/* ===========================
+   Footer
+   =========================== */
+.footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* ===========================
+   Responsive Design
+   =========================== */
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 36px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+    }
+
+    .contact-info {
+        gap: 15px;
+        font-size: 12px;
+    }
+
+    .main-content {
+        padding: 30px 20px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .experience-header,
+    .education-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .date {
+        align-self: flex-start;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .languages {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-item h3,
+    .education-item h3,
+    .project-item h3 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 40px 15px;
+    }
+
+    .header-content h1 {
+        font-size: 28px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .contact-info {
+        gap: 10px;
+        flex-direction: column;
+        font-size: 11px;
+    }
+
+    .main-content {
+        padding: 20px;
+        margin: 15px auto;
+    }
+
+    .section {
+        margin-bottom: 30px;
+        padding-bottom: 25px;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    .experience-item,
+    .education-item,
+    .project-item {
+        padding: 15px;
+    }
+}
+
+/* ===========================
+   Print Styles
+   =========================== */
+@media print {
+    body {
+        background-color: white;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
+    .main-content {
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0;
+        margin: 0;
+    }
+
+    .header {
+        page-break-after: avoid;
+    }
+
+    .section {
+        page-break-inside: avoid;
+    }
+}
